@@ -18,8 +18,45 @@
           <%- include('./layout/sidebar'); -%>  
         </div>
         <div class="col-8">
-          <main>
-            <p>Emily Wang</p>
+          <main class="h-100">
+            <div class="container-fluid px-5 py-5 h-100">
+              <div class="d-flex align-items-center">
+                <h2 class="fw-bold me-4 fs-4">Assignment</h2>
+                <div class="me-auto">
+                  <a 
+                    href="#"
+                    id="dropdownMenuButton" 
+                    data-bs-toggle="dropdown" 
+                    role="button"
+                    class="d-flex align-items-center text-dark fw-bold"
+                  >
+                    All Courses
+                    <span class="material-symbols-outlined text-success ms-2">
+                      expand_more
+                    </span>
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="#">Menu item</a></li>
+                    <li><a class="dropdown-item" href="#">Menu item</a></li>
+                    <li><a class="dropdown-item" href="#">Menu item</a></li>
+                  </ul>
+                </div>
+
+                <button 
+                  type="button"
+                  class="d-flex me-4 bg-transparent border-0"
+                >
+                  <span class="material-symbols-outlined">
+                    search
+                  </span>
+                </button>
+                <span class="material-symbols-outlined">
+                  notifications_active
+                </span>
+              </div>
+              
+              
+            </div>
           </main>
         </div>
       </div>
