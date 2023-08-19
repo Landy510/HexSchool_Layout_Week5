@@ -1,0 +1,18 @@
+// utils
+@import './utils/variables';
+
+// vendors
+@import './vendors/bootstrap';
+
+// base
+@import './base/reset';
+@import './base/fontStyle';
+@import './base/base';
+
+
+
+// layout
+@import './layout/sidebar';
+
+// pages
+@import './pages/index.scss';

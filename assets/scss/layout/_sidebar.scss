@@ -1,0 +1,36 @@
+.navigation-list {
+
+  li {
+
+    a.active {
+      color: $success !important;
+      position: relative;
+    }
+
+    a.active::before {
+      content: '';
+      position: absolute;
+      left: -24px;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background-color: $success;
+    }
+
+    a:hover {
+      color: $success !important;
+      position: relative;
+    }
+
+    a:hover::before {
+      content: '';
+      position: absolute;
+      left: -24px;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background-color: $success;
+    }
+
+  }
+}
