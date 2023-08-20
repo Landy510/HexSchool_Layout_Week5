@@ -1,3 +1,52 @@
 .index-title {
   font-size: 100px;
 }
+
+.ck.ck-reset.ck-editor.ck-rounded-corners {
+  transform: scale(0);
+  transform-origin: right bottom;
+  position: absolute;
+  top: -1px; 
+  bottom: -26px;
+  right: -17px; 
+  left: -18px; 
+  background-color: #fff;
+  transition: transform .5s;
+
+  .ck-editor__main {
+    height: 100%;
+
+    .ck-content {
+      height: 100%;
+    }
+  }
+}
+
+.close-btns {
+  opacity: 0;
+  display: none;
+  transition-delay: 0.5s;
+  text-align: end;
+  position: absolute;
+  right: 0;
+  left: -16px;
+  bottom: -60px;
+  background-color: #fff;
+  padding: 8px 0;
+}
+
+.reply-section.active {
+
+  .ck.ck-reset.ck-editor.ck-rounded-corners {
+    transform: scale(1);    
+  }
+  
+  .close-btns {
+    opacity: 1;
+    display: block;
+  }
+}
+
+.card {
+  height: calc(100% - 70px);
+}

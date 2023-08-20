@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,100,1,200" rel="stylesheet" /> -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,1,200" />
+    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
     <title>index</title>
   </head>
   <body>
@@ -171,8 +172,8 @@
                     </div>
                   </div>
                   <div class="col-7">
-                    <div class="tab-content" id="nav-tabContent">
-                      <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                    <div class="tab-content h-100" id="nav-tabContent">
+                      <div class="tab-pane fade show active h-100" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
                         <p 
                           class="text-secondary text-end"
                           style="font-size: 12px; line-height: 24px;"
@@ -202,8 +203,8 @@
                               </ul>
                             </div>
                           </h5>
-                          <div class="card-body">
-                            <div class="d-flex pt-3">
+                          <div class="card-body d-flex flex-column">
+                            <div class="d-flex pt-3 flex-grow-1">
                               <div>
                                 <img 
                                   src="https://github.com/hexschool/2022-web-layout-training/blob/main/week5/emilywang.jpeg?raw=true" 
@@ -214,13 +215,13 @@
                                   style="object-fit: cover;"
                                 >
                               </div>
-                              <div>
+                              <div class="border-bottom ">
                                 <div>
                                   <p class="fw-bold">Emily Wang</p>
                                   <p style="font-size: 12px; line-height: 24px;">10:38 AM (4 hours ago)</p>
                                 </div>
                                 <div 
-                                  class="border-bottom pb-3"
+                                  class="pb-3"
                                   style="font-size: 14px;"
                                 >
                                   Hi Teacher, the attached file is my homework of chapter 2. And here comes a question: Why in the following code the height of the div is bigger than the height of the <code class="text-success font-family-roboto">img</code> ? There is a gap below the image, but it doesn’t seems to be a padding/margin. 
@@ -244,7 +245,10 @@
                                 </div>
                               </div>
                             </div>
-                            <div style="position: relative;">
+                            <div 
+                              class="reply-section flex-grow-1"
+                              style="position: relative;"
+                            >
                               <div class="relative">
                                 <div class="d-flex pt-3">
                                   <div>
@@ -321,17 +325,26 @@
                                     >Mark as read</button>
                                     <button 
                                       type="button" 
-                                      class="btn btn-success px-4 fw-bold"
+                                      class="btn btn-success px-4 fw-bold reply-btn"
                                       style="border-radius: 2px;"
                                     >Reply</button>
                                   </div>
                                   
                                 </div>
                               </div>
-                              <div 
-                                class="border border-secondary"
-                                style="position: absolute; top: 0; bottom: -64px; right: -17px; left: -17px; background-color: #fff;"
-                              ></div>
+                              <div id="editor"></div>
+                              <div class="close-btns">
+                                <button 
+                                  type="button" 
+                                  class="btn btn-outline-success me-3 px-4 fw-bold close-btn"
+                                  style="border-radius: 2px;"
+                                >Cancel</button>
+                                <button 
+                                  type="button" 
+                                  class="btn btn-success px-4 fw-bold"
+                                  style="border-radius: 2px;"
+                                >Reply</button>
+                              </div>
                             </div>
                             
                             
@@ -352,5 +365,21 @@
       </div>
     </div>
     <script type="module" src="../main.js"></script>
+    <script>
+      const editorEl = document.querySelector( '#editor' );
+      const replySectionEl = document.querySelector('.reply-section');
+      const closeBtn = document.querySelector('.close-btn')
+
+      const instance = ClassicEditor
+          .create( editorEl )
+          
+      const replayBtn = document.querySelector('.reply-btn')
+      replayBtn.addEventListener('click', () => {
+        replySectionEl.classList.add('active')
+      })
+      closeBtn.addEventListener('click', () => {
+        replySectionEl.classList.remove('active')
+      })
+    </script>
   </body>
 </html>
