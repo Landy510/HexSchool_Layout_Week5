@@ -3,11 +3,10 @@
 }
 
 .ck.ck-reset.ck-editor.ck-rounded-corners {
-  transform: scale(0);
-  transform-origin: right bottom;
+  display: none;
   position: absolute;
   top: -1px; 
-  bottom: -26px;
+  bottom: -33px;
   right: -17px; 
   left: -18px; 
   background-color: #fff;
@@ -23,7 +22,6 @@
 }
 
 .close-btns {
-  opacity: 0;
   display: none;
   transition-delay: 0.5s;
   text-align: end;
@@ -38,15 +36,20 @@
 .reply-section.active {
 
   .ck.ck-reset.ck-editor.ck-rounded-corners {
-    transform: scale(1);    
+    display: block;
   }
   
   .close-btns {
-    opacity: 1;
     display: block;
   }
 }
 
 .card {
   height: calc(100% - 70px);
+}
+
+.list-group-item.active {
+  background-color: $gray-100;
+  color: var(--bs-dark);
+  border-color: $gray-100;
 }
