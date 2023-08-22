@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,100,1,200" rel="stylesheet" /> -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,1,200" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
     <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
     <title>index</title>
   </head>
@@ -17,8 +16,11 @@
         </div>
         <div class="col-9">
           <main class="h-100">
-            <div class="container-fluid px-5 py-5 h-100 d-flex flex-column">
-              <div class="d-flex align-items-center">
+            <div 
+              class="container-fluid h-100 d-flex flex-column"
+              style="padding: 32px;"
+            >
+              <div class="d-flex align-items-center mb-4">
                 <h2 class="fw-bold me-4 fs-4">Assignment</h2>
                 <div class="me-auto">
                   <a 
@@ -44,16 +46,22 @@
                   type="button"
                   class="d-flex me-4 bg-transparent border-0"
                 >
-                  <span class="material-symbols-outlined">
+                  <span 
+                    class="material-symbols-outlined"
+                    style="font-variation-settings: 'wght' 500;"
+                  >
                     search
                   </span>
                 </button>
-                <span class="material-symbols-outlined">
+                <span 
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 1;"
+                >
                   notifications_active
                 </span>
               </div>
               
-              <div class="container-fluid px-0 mt-5 flex-grow-1">
+              <div class="container-fluid px-0 flex-grow-1">
                 <div class="row g-0 h-100">
                   <div class="col-5">
                     <div>
@@ -204,7 +212,7 @@
                             </div>
                           </h5>
                           <div class="card-body d-flex flex-column">
-                            <div class="d-flex pt-3 flex-grow-1">
+                            <div class="d-flex flex-grow-1">
                               <div>
                                 <img 
                                   src="https://github.com/hexschool/2022-web-layout-training/blob/main/week5/emilywang.jpeg?raw=true" 
@@ -221,7 +229,7 @@
                                   <p style="font-size: 12px; line-height: 24px;">10:38 AM (4 hours ago)</p>
                                 </div>
                                 <div 
-                                  class="pb-3"
+                                  class="pb-3 mt-3"
                                   style="font-size: 14px;"
                                 >
                                   Hi Teacher, the attached file is my homework of chapter 2. And here comes a question: Why in the following code the height of the div is bigger than the height of the <code class="text-success font-family-roboto">img</code> ? There is a gap below the image, but it doesn’t seems to be a padding/margin. 
@@ -272,7 +280,16 @@
                                         type="button" 
                                         class="bg-transparent border-0 me-4"
                                       >
-                                        <span class="material-symbols-outlined">
+                                        <!-- <span 
+                                          class="material-symbols-outlined"
+                                          style="font-variation-settings: 'FILL' 0, 'wght' 100, 'GRAD' 0, 'opsz' 48;"
+                                        >
+                                          star
+                                        </span>   -->
+                                        <span 
+                                          class="material-symbols-outlined"
+                                          style="font-variation-settings: 'FILL' 0;"
+                                        >
                                           star
                                         </span>  
                                       </button>
@@ -280,12 +297,18 @@
                                         type="button"
                                         class="bg-transparent border-0"
                                       >
-                                        <span class="material-symbols-outlined">
+                                        <span 
+                                          class="material-symbols-outlined"
+                                          style="font-variation-settings: 'FILL' 1;"
+                                        >
                                           edit
                                         </span>
                                       </button>
                                     </div>
-                                    <div style="font-size: 14px;">
+                                    <div 
+                                      class="mt-3"
+                                      style="font-size: 14px;"
+                                    >
                                       Hi David, by default, an image is rendered inline, like a letter so it sits on the same line that a, b, c and d sit on. There is space below that line for the descenders you find on letters like g, j, p and q.
     
                                       <p class="my-4">You can</p>
